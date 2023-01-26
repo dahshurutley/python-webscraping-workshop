@@ -55,16 +55,13 @@ Using Python3's BeautifulSoup and Request libaries, and using their functions re
 Using BS4's find_all function and a for loop, we can search for all 'img' tags within the document and print it to the console. This we use a for-loop in order to itterate through all matching elements in the webpage with the img tag. 
 
 ```
-
 for images in soup.find_all('img'):
     print(images)
-
 ```
 
 The output should look like this: 
 
 ```
-
 <img alt="" id="image-0" src="408/287"/>
 <img alt="" id="image-1" src="/200/287"/>
 <img alt="" id="image-2" src="/200/140"/>
@@ -73,7 +70,6 @@ The output should look like this:
 <img alt="" id="image-5" src="/96/140"/>
 <img alt="" id="image-6" src="/96/139"/>
 <img alt="" id="image-7" src="/200/138"/>
-
 ```
 
 ### 3. HTML Attributes
@@ -81,12 +77,9 @@ The output should look like this:
 Elements we can find using BS4 may contain attributes. This is apparent within the image elements we printed to the console in our last step. We can access the attributes of an element using bracket notation.
 
 ```
-
 for images in soup.find_all('img'):
     # print(images)
     print(images['src'])
-
-
 ```
 
 Using the for-loop we made previously, we can access each 'src' attribute to retreive the source to the images we want to download. 
@@ -94,7 +87,6 @@ Using the for-loop we made previously, we can access each 'src' attribute to ret
 The Output should look like this: 
 
 ```
-
 408/287
 /200/287
 /200/140
@@ -103,7 +95,6 @@ The Output should look like this:
 /96/140
 /96/139
 /200/138
-
 ```
 
 ### 4. Combining the image source with the webpage links. 
@@ -115,20 +106,14 @@ The Output should look like this:
 The notation looks like this: 
 
 ```
-
 age = 22 
 print(f'I am {age} years old")
-
-
 ```
 
 In which the output would be: 
 
 ```
-
 I am 22 years old
-
-
 ```
 
 #### 4b. Image Link 
@@ -142,23 +127,18 @@ In order to autonomously get the image source, we need to combine the webpage li
         
         link = f'https://placekitten.com/{images["src"]}'
         image_links.append(link)
-        
-
 ```
 
 Lets make a second for loop to itterate through and print out all elements within our list 'image_links' 
 
 ```
-
 for images in image_links: 
     print(images) 
-
 ```
 
 The output should look like this: 
     
 ```
-
 https://placekitten.com/408/287
 https://placekitten.com//200/287
 https://placekitten.com//200/140
@@ -167,7 +147,6 @@ https://placekitten.com//200/286
 https://placekitten.com//96/140
 https://placekitten.com//96/139
 https://placekitten.com//200/138
-
 ```
 
 
@@ -179,11 +158,9 @@ In order to download the image, we will be using the urllib.request module and i
 In addition, we'll add a counter that we will add 1 to on each itteration so that the file names don't interact. We will use f-strings to input this into the function. and save the file. 
 
 ```
-
 for images in image_links: 
      counter += 1 
      urllib.request.urlretrieve(images, f"./Images/{counter}.jpg")
-
 ```
 
 
