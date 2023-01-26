@@ -28,7 +28,7 @@ In the remaining time for the workshop we'll allow learners to actually run thei
 
 The Boilerplate consists of the code needed to retrieve the html from a webpage. In our workshop, we will be using placekitten.com, as it is a static website that doesn't load anything dynamically through Javascript or otherwise. Meaning we can always find and save the same images on the webpage without anything chaning for each person attending the workshop.
 
-```
+```python
 # Modules 
 from bs4 import BeautifulSoup
 import requests
@@ -61,7 +61,7 @@ for images in soup.find_all('img'):
 
 The output should look like this: 
 
-```
+```html
 <img alt="" id="image-0" src="408/287"/>
 <img alt="" id="image-1" src="/200/287"/>
 <img alt="" id="image-2" src="/200/140"/>
@@ -76,7 +76,7 @@ The output should look like this:
 
 Elements we can find using BS4 may contain attributes. This is apparent within the image elements we printed to the console in our last step. We can access the attributes of an element using bracket notation.
 
-```
+```python
 for images in soup.find_all('img'):
     # print(images)
     print(images['src'])
@@ -105,14 +105,14 @@ The Output should look like this:
 
 The notation looks like this: 
 
-```
+```python
 age = 22 
 print(f'I am {age} years old")
 ```
 
 In which the output would be: 
 
-```
+```python
 I am 22 years old
 ```
 
@@ -120,18 +120,18 @@ I am 22 years old
 
 In order to autonomously get the image source, we need to combine the webpage link with the image source in order to get the actual link to the image for downloading. We will append (add) the results to our list 'image_links'.  
 
-```
-    for images in soup.find_all('img'):
-        # print(images)
-        print(images['src'])
-        
-        link = f'https://placekitten.com/{images["src"]}'
-        image_links.append(link)
+```python
+for images in soup.find_all('img'):
+    # print(images)
+    print(images['src'])
+
+    link = f'https://placekitten.com/{images["src"]}'
+    image_links.append(link)
 ```
 
 Lets make a second for loop to itterate through and print out all elements within our list 'image_links' 
 
-```
+```python
 for images in image_links: 
     print(images) 
 ```
@@ -157,7 +157,7 @@ In order to download the image, we will be using the urllib.request module and i
 
 In addition, we'll add a counter that we will add 1 to on each itteration so that the file names don't interact. We will use f-strings to input this into the function. and save the file. 
 
-```
+```python
 for images in image_links: 
      counter += 1 
      urllib.request.urlretrieve(images, f"./Images/{counter}.jpg")
