@@ -26,7 +26,7 @@ In the remaining time for the workshop we'll allow learners to actually run thei
 
 ### 1. The Boilerplate
 
-The Boilerplate consists of the code needed to retrieve the html from a webpage. In our workshop, we will be using placekitten.com, as it is a static website that doesn't load anything dynamically through javascrip or otherwise. Meaning we can always find and save the same images on the webpage without anything chaning for each person attending the workshop.
+The Boilerplate consists of the code needed to retrieve the html from a webpage. In our workshop, we will be using placekitten.com, as it is a static website that doesn't load anything dynamically through Javascript or otherwise. Meaning we can always find and save the same images on the webpage without anything chaning for each person attending the workshop.
 
 ```
 # Modules 
@@ -133,7 +133,7 @@ I am 22 years old
 
 #### 4b. Image Link 
 
-In order to autonimously get the image source, we need to combine the webpage link with the image source in order to get the actual link to the image for downloading. We will append (add) the results to our list 'image_links'.  
+In order to autonomously get the image source, we need to combine the webpage link with the image source in order to get the actual link to the image for downloading. We will append (add) the results to our list 'image_links'.  
 
 ```
     for images in soup.find_all('img'):
