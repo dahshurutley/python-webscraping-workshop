@@ -112,7 +112,7 @@ print(f'I am {age} years old")
 
 In which the output would be: 
 
-```python
+```
 I am 22 years old
 ```
 
