@@ -155,7 +155,7 @@ https://placekitten.com//200/138
 In order to download the image, we will be using the urllib.request module and it's function urlretrieve. Urlretrieve takes two parameters, the image link and the path in which we want to save the images to. Using the previous for loop, we can save each image into a folder 'Images' thats already in the repo. 
 
 
-In addition, we'll add a counter that we will add 1 to on each itteration so that the file names don't interact. We will use f-strings to input this into the function. and save the file. 
+In addition, we'll add a counter that we will add 1 to on each itteration so that the files won't overwrite each other because they have the same file name. We will use f-strings to input this into the function. and save the file. 
 
 ```python
 for images in image_links: 
