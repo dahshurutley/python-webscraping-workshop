@@ -54,7 +54,7 @@ Using Python3's BeautifulSoup and Request libaries, and using their functions re
 
 Using BS4's find_all function and a for loop, we can search for all 'img' tags within the document and print it to the console. This we use a for-loop in order to itterate through all matching elements in the webpage with the img tag. 
 
-```
+```python
 for images in soup.find_all('img'):
     print(images)
 ```
