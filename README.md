@@ -26,7 +26,7 @@ In the remaining time for the workshop we'll allow learners to actually run thei
 
 ### 1. The Boilerplate
 
-The Boilerplate consists of the code needed to retrieve the html from a webpage. In our workshop, we will be using placekitten.com, as it is a static website that doesn't load anything dynamically through Javascript or otherwise. Meaning we can always find and save the same images on the webpage without anything chaning for each person attending the workshop.
+The Boilerplate consists of the code needed to retrieve the html from a webpage. In our workshop, we will be using placekitten.com, as it is a static website that doesn't load anything dynamically through Javascript or otherwise. Meaning we can always find and save the same images on the webpage without anything changing for each person attending the workshop.
 
 ```python
 # Modules 
